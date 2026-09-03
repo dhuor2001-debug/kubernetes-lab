@@ -1,0 +1,5 @@
+Application: kicbase/echo-server:1.0
+Application port: 8080
+Deployment: myapp
+Replicas: 3
+Namespace: default
