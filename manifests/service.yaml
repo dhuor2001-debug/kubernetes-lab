@@ -1,5 +1,16 @@
-Application: kicbase/echo-server:1.0
-Application port: 8080
-Deployment: myapp
-Replicas: 3
-Namespace: default
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: myapp-service
+
+spec:
+  selector:
+    app: myapp
+
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+
+  type: NodePort
